@@ -1,18 +1,28 @@
 import java.util.Scanner;
+public class GradeCalculator{
+ public static void main(String[] args){
+ Scanner sc = new Scanner(System.in);
+ int p = sc.nextInt();
+ int c = sc.nextInt();
+ int b = sc.nextInt();
+ int m = sc.nextInt();
+ int comp = sc.nextInt();
+ 
+ int total = p+c+b+m+comp;
+ double percentage= total / 5.0;
+ System.out.println("Percentage= "+percentage);
 
- public class GradeCalculator {
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter marks: ");
-        int marks = sc.nextInt();
-
-        String grade = marks >= 90 ? "A" :
-                       marks >= 75 ? "B" :
-                       marks >= 60 ? "C" :
-                       marks >= 40 ? "D" : "F";
-
-        System.out.println("Grade = " + grade);
-    }
+  if (percentage >= 90)
+      System.out.println("Grade A");
+   else if (percentage >= 80)
+       System.out.println("Grade B");
+   else if (percentage >= 70)
+        System.out.println("Grade C");
+    else if (percentage >= 60)
+         System.out.println("Grade D");
+    else if (percentage >= 40)
+         System.out.println("Grade E");
+    else
+            System.out.println("Grade F");
+}
 }
