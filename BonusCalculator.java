@@ -1,23 +1,16 @@
 import java.util.Scanner;
+public class BonusCalculator{
+ public static void main(String args[]){
+ Scanner sc = new Scanner(System.in);
+ int years = sc.nextInt();
+ double salary = sc.nextDouble();
 
-public class BonusCalculator {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter performance rating: ");
-        int rating = scanner.nextInt();
-        double bonus;
+ if(years > 5){
+   double bonus = salary * 0.05;
+   System.out.println("Bonus =" +bonus);
 
-        
-        if (rating > 8) {
-            bonus = 0.15;
-        } else if (rating >= 5 && rating <= 8) {
-            bonus = 0.10;
-        } else {
-            bonus = 0.0;
-        }
-
-        
-        System.out.printf("%.0f%% Bonus\n", bonus * 100);
-        scanner.close();
-    }
+}else{
+ System.out.println("No bouns");
+}
+}
 }
